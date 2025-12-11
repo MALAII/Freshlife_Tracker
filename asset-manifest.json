@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Freshlife_Tracker/static/css/main.178b8759.css",
+    "main.js": "/Freshlife_Tracker/static/js/main.6ed8c006.js",
+    "index.html": "/Freshlife_Tracker/index.html",
+    "main.178b8759.css.map": "/Freshlife_Tracker/static/css/main.178b8759.css.map",
+    "main.6ed8c006.js.map": "/Freshlife_Tracker/static/js/main.6ed8c006.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.178b8759.css",
+    "static/js/main.6ed8c006.js"
+  ]
+}
