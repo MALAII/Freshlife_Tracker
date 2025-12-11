@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Freshlife_Tracker/static/css/main.178b8759.css",
-    "main.js": "/Freshlife_Tracker/static/js/main.0ea32c96.js",
+    "main.js": "/Freshlife_Tracker/static/js/main.c5b8d7da.js",
     "index.html": "/Freshlife_Tracker/index.html",
     "main.178b8759.css.map": "/Freshlife_Tracker/static/css/main.178b8759.css.map",
-    "main.0ea32c96.js.map": "/Freshlife_Tracker/static/js/main.0ea32c96.js.map"
+    "main.c5b8d7da.js.map": "/Freshlife_Tracker/static/js/main.c5b8d7da.js.map"
   },
   "entrypoints": [
     "static/css/main.178b8759.css",
-    "static/js/main.0ea32c96.js"
+    "static/js/main.c5b8d7da.js"
   ]
 }
