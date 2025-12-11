@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GroceryContext } from "../context/GroceryContext";
 import { useNavigate } from "react-router-dom";
-import RecipeSuggestion from "./RecipeSuggestion";
+// import RecipeSuggestion from "./RecipeSuggestion";
 import "../styles/ItemCard.css";
 
 function ItemCard({ item }) {
@@ -48,7 +48,7 @@ function ItemCard({ item }) {
         <button className="card-btn delete" onClick={handleDelete}>Delete</button>
       </div>
 
-      {getStatus(item.expiryDate) === "soon" && <RecipeSuggestion item={item} />}
+      {/* {getStatus(item.expiryDate) === "soon" && <RecipeSuggestion item={item} />} */}
     </div>
   );
 }
