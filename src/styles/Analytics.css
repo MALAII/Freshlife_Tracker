@@ -1,0 +1,119 @@
+/* ==============================
+   Analytics Page Styling
+   ============================== */
+
+.analytics-container {
+  padding: 30px 20px;
+  text-align: center;
+  animation: fadeIn 0.7s ease;
+  min-height: 80vh;
+  background: #f4f7ff; /* Soft modern background */
+}
+
+/* Page Title */
+.analytics-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  background: linear-gradient(45deg, #ff7eb3, #ff758c);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: pop 0.5s ease;
+}
+
+/* Cards Container */
+.analytics-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Individual Card */
+.analytics-card {
+  width: 280px;
+  padding: 25px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pop 0.4s ease;
+}
+
+/* Card hover effect */
+.analytics-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Card colors for status */
+.analytics-card.fresh {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.analytics-card.soon {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+  color: #333;
+}
+
+.analytics-card.expired {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+/* Card title inside */
+.analytics-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Progress bar container */
+.progress-bar {
+  height: 10px;
+  width: 100%;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+/* Progress fill */
+.fill {
+  height: 10px;
+  background: white;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 480px) {
+  .analytics-title {
+    font-size: 24px;
+    padding: 10px 20px;
+  }
+
+  .analytics-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .analytics-cards {
+    gap: 15px;
+  }
+}
