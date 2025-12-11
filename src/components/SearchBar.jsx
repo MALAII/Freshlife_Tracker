@@ -1,6 +1,6 @@
 import React from "react";
-
-import "../styles/SearchBar"
+import { FiSearch } from "react-icons/fi";
+import "../styles/SearchBar.css";
 
 function SearchBar({ placeholder, onSearch }) {
   return (
@@ -11,7 +11,10 @@ function SearchBar({ placeholder, onSearch }) {
         placeholder={placeholder || "Search..."}
         onChange={(e) => onSearch(e.target.value)}
       />
-      <button className="search-btn">Search</button>
+
+      <button className="search-btn">
+        <FiSearch className="search-icon" />
+      </button>
     </div>
   );
 }

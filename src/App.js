@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import AddItem from "./pages/AddItem";
 import Analytics from "./pages/Analytics";
@@ -8,20 +8,36 @@ import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
+// import "./styles/Layout.css";
 
 function App() {
   const { user } = useContext(AuthContext);
+
   return (
-    <BrowserRouter>
-      {user && <Navbar />}
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/forgot" element={<ForgotPassword />} />
-        <Route path="/" element={user ? <Dashboard /> : <Navigate to="/login" />} />
-        <Route path="/add" element={user ? <AddItem /> : <Navigate to="/login" />} />
-        <Route path="/analytics" element={user ? <Analytics /> : <Navigate to="/login" />} />
-      </Routes>
+    <BrowserRouter basename="/Freshlife_Tracker">
+      <div className="app-layout">
+        {user && <Sidebar />}
+
+        <div className="page-content">
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/forgot" element={<ForgotPassword />} />
+            <Route
+              path="/"
+              element={user ? <Analytics /> : <Navigate to="/login" replace />}
+            />
+            <Route
+              path="/add"
+              element={user ? <AddItem /> : <Navigate to="/login" replace />}
+            />
+            <Route
+              path="/dashboard"
+              element={user ? <Dashboard /> : <Navigate to="/login" replace />}
+            />
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
   );
 }

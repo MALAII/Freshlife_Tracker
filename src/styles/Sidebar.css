@@ -1,0 +1,96 @@
+/* Sidebar Container */
+.sidebar {
+  width: 240px;
+  background: #ffffff;
+  border-right: 1.5px solid #e5e7eb;
+  color: #1e3a8a;
+  display: flex;
+  flex-direction: column;
+  /* padding: 30px 0; */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Logo / Title */
+.side-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* Navigation Items */
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  /* padding: 0 18px; */
+}
+
+/* Link Styles */
+.side-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.side-link .icon {
+  font-size: 22px;
+}
+
+/* Hover Effects */
+.side-link:hover {
+  background: #e8f3ff;
+  color: #1d4ed8;
+  transform: scale(1.02);
+}
+
+/* Active Route Highlight */
+.side-link.active {
+  background: #1d4ed8;
+  color: #ffffff;
+  transform: scale(1.02);
+}
+
+.side-link.active .icon {
+  color: white;
+}
+
+/* Logout Button (Positioned at Bottom) */
+.logout-btn {
+  margin-top: auto;
+  margin-bottom: 20px;
+  width: calc(100% - 36px);
+  align-self: center;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #dc2626;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.logout-btn:hover {
+  background: #b91c1c;
+  transform: scale(1.03);
+}
+
+.logout-btn .icon {
+  font-size: 22px;
+}

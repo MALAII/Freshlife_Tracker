@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { GroceryContext } from "../context/GroceryContext";
-import ItemCard from "../components/ItemCard";
+import ItemRow from "../components/ItemRow";
 import "../styles/Dashboard.css";
+import "../styles/ItemTable.css";
 
 function Dashboard() {
   const { items } = useContext(GroceryContext);
@@ -10,8 +11,9 @@ function Dashboard() {
   const [filterCategory, setFilterCategory] = useState("All");
 
   const filteredItems = items.filter((item) => {
-    const matchesSearch =
-      item.name.toLowerCase().includes(search.toLowerCase());
+    const matchesSearch = item.name
+      .toLowerCase()
+      .includes(search.toLowerCase());
 
     const matchesCategory =
       filterCategory === "All" || item.category === filterCategory;
@@ -21,7 +23,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      <h2 className="dash-title">Your Items</h2>
+      {/* <h2 className="dash-title">Your Items</h2> */}
 
       <div className="filters">
         <input
@@ -47,14 +49,31 @@ function Dashboard() {
         </select>
       </div>
 
-      <div className="item-list">
-        {filteredItems.length > 0 ? (
-          filteredItems.map((item) => (
-            <ItemCard key={item.id} item={item} />
-          ))
-        ) : (
-          <p className="no-items">No items found</p>
-        )}
+      <div className="table-container">
+        <table className="item-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Qty</th>
+              <th>Category</th>
+              <th>Expiry</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {filteredItems.length > 0 ? (
+              filteredItems.map((item) => (
+                <ItemRow key={item.id} item={item} />
+              ))
+            ) : (
+              <tr>
+                <td colSpan="6" className="no-items">No items found</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
       </div>
     </div>
   );

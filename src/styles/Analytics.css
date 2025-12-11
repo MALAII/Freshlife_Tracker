@@ -35,8 +35,8 @@
 
 /* Individual Card */
 .analytics-card {
-  width: 280px;
-  padding: 25px;
+  width: 140px;
+  padding: 15px;
   border-radius: 20px;
   color: white;
   box-shadow: 0 5px 20px rgba(0,0,0,0.15);
@@ -117,3 +117,20 @@
     gap: 15px;
   }
 }
+
+.analytics-icon {
+  font-size: 45px;
+  margin-bottom: 12px;
+  animation: bounce 1s infinite alternate ease-in-out;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
+/* Extra color for total card */
+.analytics-card.total {
+  background: linear-gradient(135deg, #845ec2, #2c73d2);
+}
+
